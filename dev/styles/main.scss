@@ -1,7 +1,9 @@
 // Подключение шрифтов и переменных
 @import 'fonts';
-@import 'vars';
+@import 'variables';
 @import 'sprite';
+@import 'reset';
+@import 'mixins';
 // Подключение компонентов
 @import 'components/header';
 @import 'components/footer';
