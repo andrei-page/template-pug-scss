@@ -1,0 +1,59 @@
+include ../layout/header-menu.pug
+.header-item
+    .header-item__content
+        nav.header-item__nav
+            ul
+                li Услуги
+                    nav.header-item__menu
+                        .header-item__bg
+                        li
+                            a(href="") Первая ссылка
+                        li
+                            a(href="") Первая ссылка
+                        li
+                            a(href="") Первая ссылка
+                        li
+                            a(href="") Первая ссылка
+                li Блог
+                    nav.header-item__menu
+                        .header-item__bg
+                        li
+                            a(href="") Полезные материалы
+                        li
+                            a(href="#")  Кейсы
+                        li
+                            a(href="#")  Исследования
+                li Отрасли
+                    nav.header-item__menu
+                        .header-item__bg
+                        li
+                            a(href="#") Финансы
+                        li
+                            a(href="#") Недвижимость
+                        li
+                            a(href="#") Авто
+                        li
+                            a(href="#") Медицина
+                li Компания
+                    nav.header-item__menu
+                        .header-item__bg
+                        li
+                            a(href="")  О AMDG
+                        li
+                            a(href="#")  Отзывы
+                        li
+                            a(href="#")  Сертификаты
+                        li
+                            a(href="#")  Вакансии
+                        li
+                            a(href="#")  Контакты
+        a(href="#").header-item__phone +7 (495) 153-42-47
+        .header-item__search
+            img(src="assets/img/search-icon.svg", alt="search-icon")
+        .header-item__edit.js-pop-edit-button
+            img(src="assets/img/edit.svg", alt="edit").header-item__icon
+            button.header-item__button Оставить заявку
+        .header-item__hamburger
+            .header-item__box
+                span
+                span

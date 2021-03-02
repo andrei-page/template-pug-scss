@@ -1,4 +1,5 @@
 
+@import '../styles/mixins';
 *{
     box-sizing: border-box;
 
@@ -36,10 +37,28 @@ h1,h2,h3,h4,h5,h6,p{
 .wrapper{
 	overflow: hidden;
 }
+h1{
+	font-size: 36px;
+    line-height: 36px;
+    font-weight: 500;
+	@include md{
+		font-size: 30px;
+		line-height: 36px;
+	}
+}
+.container{
+	width: 100%;
+    max-width: 1300px;
+    margin: 0px auto;
+    padding: 0px 20px;
+    position: relative;
+}
 body{
 	padding: 0;
 	margin: 0;
-	font-size: 1rem;
+    font-size: 14px;
+    line-height: 18px;
+	background: #fff;
 	font-weight: 400;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Formular';
 }

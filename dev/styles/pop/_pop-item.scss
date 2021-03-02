@@ -1,0 +1,367 @@
+.pop-item{
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: -300px;
+    z-index: 100;
+    transition: all 0.2s ease-in-out 0s;
+    @include md{
+        padding: 62px 16px 45px 73px;
+        overflow: auto;
+    }
+    &.is-show{
+        opacity: 1;
+        visibility: visible;
+        left: 0px;
+    }
+    
+    &__main{
+        width: 100%;
+        max-width: 1140px;
+        margin: 0px auto;
+        padding: 0px 20px;
+        position: relative;
+        @include xxl{
+            padding: 0 40px;
+        }
+        @include md{
+            padding: 0px 15px;
+        }
+    }
+    &__group{
+        display: grid;
+        grid: auto /repeat(2,1fr);
+        grid-gap: 20px;
+        .pop-item__button{
+            display: none;
+            @include xxl{
+                display: block;
+            }
+        }
+        @include md{
+            grid: auto /repeat(1,1fr);
+            grid-gap: 10px;
+
+        }
+    }
+    &__subtext{
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--color-blue);
+        
+        margin-top: 20px;
+        @include md{
+            margin-top: 10px;
+        }
+        a{
+            color: var(--color-blue);
+            &:hover{
+
+                text-decoration: none;
+            }
+        }
+    }
+    &__agree{
+        @include md{
+            margin-top: 10px;
+        }
+        input{
+            display: none;
+            &:checked + label::after{
+                opacity: 1;
+            }
+        }
+        label{
+            display: block;
+            cursor: pointer;
+            position: relative;
+            padding: 0px 0px 0px 35px;
+            font-size: 14px;
+            line-height: 20px;
+            color: var(--color-blue);
+            &::before{
+                content: '';
+                border: 1px solid var(--color-blue);
+                width: 18px;
+                height: 18px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            &:after{
+                content: '';
+                background: url('../img/check.svg') no-repeat center center / contain;
+                width: 17px;
+                height: 11px;
+                position: absolute;
+                top: 4px;
+                left: 1px;
+                opacity: 0;
+                transition: all 0.2s ease 0s;
+            }
+        }
+    }
+    &__box{
+        display: grid;
+        grid: auto / 1fr 306px;grid-gap: 42px;
+        @include xxl{
+            grid: auto / 1fr;
+        }
+        @include md{
+            grid-gap: 10px;
+        }
+        &.indent{
+            margin-top: 60px;
+            @include md{
+                margin-top: 15px;
+            }
+        }
+    }
+    &__textarea{
+        font-size: 18px;
+        font-family: 'Formular';
+        line-height: 24px;
+        background: none;
+        color: rgba(46, 35, 130, 0.65);
+        width: 100%;
+        border: none;
+        border-radius: 0px;
+        border-bottom: 1px solid #2E2382;
+        margin: 0px;
+        padding: 12px 0px 12px 0px;
+        transition: all 0.2s ease 0s;
+        resize: none;
+        height: 117px;
+        @include md{
+            height: 80px;
+        }
+        &:focus{
+            border-color: var(--color-red);
+        }
+    }
+    &__button{
+        background: var(--color-red);
+        border: none;
+        border-radius: 0px;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 79px;
+        color: #fff;
+        font-weight: 500;
+        transition: all 0.2s ease 0s;
+        text-decoration: none;
+        position: relative;
+        text-transform: uppercase;
+        @include xxl{
+            display: none;
+        }
+        &:hover{
+            background: var(--color-blue);
+        }
+    
+    }
+    &__file{
+        @include md{
+            display: none;
+        }
+        input{
+            display: none;
+        }
+        label{
+            font-size: 16px;
+            line-height: 20px;
+            color: rgba(46, 35, 130, 0.4);
+            position: relative;
+            padding: 0px 0px 0px 74px;
+            cursor: pointer;
+            display: inline-block;
+            &:hover::before{
+                background: var(--color-red);
+            }
+            &::before{
+                content: '';
+                background: var(--color-blue);
+                border-radius: 50%;
+                width: 58px;
+                height: 58px;
+                position: absolute;
+                top: -17px;
+                left: 0px;
+                transition: all 0.2s ease 0s;
+            }
+            &::after{
+                content: '';
+                background: url('../img/file.svg') no-repeat center center / contain;
+                width: 33px;
+                height: 32px;
+                position: absolute;
+                top: -5px;
+                left: 12px;
+            }
+        }
+    }
+    &__input{
+        font-size: 18px;
+        line-height: 24px;
+        background: none;
+        font-family: 'Formular';
+        color: rgba(46, 35, 130, 0.65);
+        width: calc(100% - 20px);
+        font-weight: 400;
+        border: none;
+        border-radius: 0px;
+        border-bottom: 1px solid var(--color-blue);
+        margin: 0px;
+        padding: 12px 0px 12px 0px;
+        transition: all 0.2s ease 0s;
+        &:focus{
+            border-color: var(--color-red);
+        }
+    
+    }
+    &__title{
+        color: var(--color-blue);
+        display: block;
+        @include md{
+            margin-bottom: 39px;
+        }
+    }
+    &__text{
+        color: var(--color-blue);
+        display: block;
+        margin: 34px 0 27px 0;
+        font-size: 16px;
+        line-height: 32px;
+        @include md{
+            display: none;
+        }
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        @include md{
+            display: block;
+            width: auto;
+            height: auto;
+        }
+    }
+    &__mobile{
+        position: absolute;
+        top: 370px;
+        left: 28px;
+        transform-origin: top left;
+        transform: translateY(100%) rotate(-90deg);
+        font-size: 0px;
+        line-height: 0px;
+        display: none;
+        @include md{
+            display: block;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                margin: 0px 0px 0px 20px;
+                a{
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: var(--color-blue);
+                    text-decoration: none;
+                    transition: all 0.2s ease 0s;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &__social{
+        position: absolute;
+        bottom: 50%;
+        left: 26px;
+        margin-bottom: -175px;
+        transform-origin: top left;
+        transform: translateY(100%) rotate(-90deg);
+        font-size: 0px;
+        line-height: 0px;
+        @include xxl{
+            display: none;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            li{
+                display: inline-block;
+                margin: 0px 0px 0px 30px;
+                a{
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: var(--color-gray-300);
+                    text-decoration: none;
+                    transition: all 0.2s ease 0s;
+                    &:hover{
+                        color: var(--color-blue);
+                    }
+                }
+            }
+        }
+    }
+    &__logo{
+        width: 34px;
+        height: 117px;
+        position: absolute;
+        top: 20px;
+        left: 24px;
+        @include md{
+            width: 34px;
+            height: 131px;
+            top: 15px;
+            left: 16px;
+        }
+    }
+    &__close{
+        background: var(--color-blue);
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        @include md{
+            width: 55px;
+            height: 55px;
+            top: 0px;
+            right: 0px;
+        }
+        &:hover{
+            background:var(--color-red);
+        }
+        img{
+            width: 25px;
+            height: 25px;
+            display: block;
+            @include md{
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}

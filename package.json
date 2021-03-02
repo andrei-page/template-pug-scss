@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
+    "deploy": "gulp build  && surge -d amdg.surge.sh dist",
     "build": "gulp build",
     "lint": "./node_modules/.bin/eslint ./dev"
   },
