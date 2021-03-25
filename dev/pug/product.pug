@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+html(lang="en")
+	include components/layout/head.pug
+body
+	include components/layout/header.pug
+	section.section-item__section
+		.container
+			nav.section-item__breadcrumbs
+				ul
+					li
+						a(href="/")  Главная
+						img(src="assets/img/chevron-right-d.svg", alt="")
+					li
+						a(href="#")  Экспресс-тесты
+						img(src="assets/img/chevron-right-d.svg", alt="")
+					li 
+						span Standard Q Covid-19 Ag IgM/IgG Duo
+	section.product-item
+		.container
+			.product-item__content
+				h4.product-item__subtitle Экспресс-тест
+				h2.product-item__title Standard Q Covid-19 Ag
+				.product-item__row
+					.product-item__main
+
+						.product-item__slider.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__image
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__image
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__image
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__image
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__image
+						.product-item__slider-small.swiper-container
+							.swiper-wrapper
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__images
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__images
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__images
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__images
+								.swiper-slide
+									img(src="assets/img/product.png", alt="product").product-item__images
+
+					.product-item__box
+						p.product-item__text Набор для самостоятельного проведения теста.           Позволяет за 15 минут выявить антиген вируса Covid-19         без специального оборудования и лабораторий. Показывает результат в 96 раз быстрее, чем стандартный ПЦР-тест.
+						.product-item__proizv 
+							| Производитель
+							img(src="assets/img/proizv.png", alt="proizv")
+						.product-item__group
+							button.product-item__button 
+								span Заказать
+							a(href="#").product-item__link 		
+								span Посмотреть презентацию
+						.product-item__grid
+							.product-item__blocks
+								img(src="assets/img/company-1.svg", alt="company-1")
+								| Рекомендовано Всемирной организацией здравоохранения
+							.product-item__blocks
+								img(src="assets/img/company-2.svg", alt="company-1")
+								| Рекомендовано Минздравом РФ* РУ № РЗН 2020/11113 от 02.07.2020
+						nav.product-item__nav
+							ul
+								li 
+									img(src="assets/img/agree.svg", alt="agree")
+									| Не требует дополнительного оборудования
+								li 
+									img(src="assets/img/agree.svg", alt="agree")
+									| Результат через 15-30 минут
+								li 
+									img(src="assets/img/agree.svg", alt="agree")
+									| Простота применения
+								li 
+									img(src="assets/img/agree.svg", alt="agree")
+									| Быстрое принятие решения об изоляции
+	
+	section.offer-item.bg
+		.container
+			h2.offer-item__title  C результатами теста на антитела вы всегда уверены, что сотрудники могут работать, не опасаясь за своё здоровье.
+			p.offer-item__text Это поможет вам лучше планировать и просчитывать риски, связанные с персоналом.
+	section.express-item
+		.container
+			.express-item__content
+				.express-item__row
+					.express-item__box
+						img.express-item__icon(src="assets/img/express-icon-1.png", alt="express icon")
+						h4.express-item__subhead  Быстрый результат
+						p.express-item__subdesc Результат через 15-30 минут
+					.express-item__box
+						img.express-item__icon(src="assets/img/express-icon-2.png", alt="express icon")
+						h4.express-item__subhead  Надёжность
+						p.express-item__subdesc 96% чувствительности при 100% специфичности
+					.express-item__box
+						img.express-item__icon(src="assets/img/express-icon-3.png", alt="express icon")
+						h4.express-item__subhead Всё под контролем
+						p.express-item__subdesc Помогает управлять рисками и контролировать здоровье внутри организации
+				.express-item__grid
+					img(src="assets/img/express-img.png", alt="image express").express-item__image
+					.express-item__boxes
+						h1.express-item__title  Осведомлён — значит вооружён 
+						p.express-item__text Сотрудники вашей организации, как и все остальные, получат иммунитет к вирусу. Они переболеют с симптомами, либо бессимптомно. Ваша цель как руководителя — помочь организации работать и уменьшить риск для людей.<br><br>Тест Standard Q Covid-19 IgM/IgG Duo даёт вам контроль и информацию о том, кто переболел и может спокойно работать, а кто ещё нет, и он рискует здоровьем своим и других. Вы будете осведомлены, а значит вооружены.
+				.express-item__main
+					img(src="assets/img/note.svg", alt="note").express-item__note
+					aside.express-item__aside
+						.express-item__subtext Экспресс-тест возвращает вам в руки контроль. Вы получаете информацию о том, болен ли ваш сотрудник фактически сразу. Так вы защищаете свой бизнес или организацию от распространения вируса в офисе либо на производстве. Вы можете тестировать сотрудников на входе, чтобы отследить людей без симптомов. Без дополнительного оборудования получить информацию о здоровье человека. Проводить встречи и собирать конференции, зная, что все участники здоровы. Организовывать работу без страха, что кто-то заразит участников.
+						.express-item__header
+							img(src="assets/img/person.jpg", alt="person").express-item__person
+							.express-item__block
+								p.express-item__name Евгений Вайман
+								p.express-item__work Управляющий партнер компании Neuroinform
+				.express-item__doc
+					nav.express-item__nav
+						ul.js-tab-menu
+							li(data-id='service-1').active ХАРАКТЕРНЫЕ ОСОБЕННОСТИ
+							li(data-id='service-2')  СОСТАВ КОМПЛЕКТА
+							li(data-id='service-3') ДОКУМЕНТЫ
+					.express-item__body.active(id='service-1').js-tab-body
+
+						.express-item__column
+							.express-item__inner
+								span Метод исследования: 
+								| -
+							.express-item__inner
+								span Цель анализа: 
+								| обнаружение антител вируса
+							.express-item__inner
+								span Биоматериал: 
+								| -
+							.express-item__inner
+								span Время проведения одного теста: 
+								| 10-15 минут
+							.express-item__inner
+								span Результаты теста:
+								|  позитивный/негативный/недействительный
+							.express-item__inner
+								span Оборудование для проведения тестов:
+								| не требуется
+							.express-item__inner
+								span Упаковка: 
+								| 20 IgM/ 20 IgG систем
+							.express-item__inner
+								span Производитель: 
+								| SD BIOSENSOR, Южная Корея
+							.express-item__inner
+								span Сертификация: 
+								| Регистрационное удостоверение Федеральной службы по надзору в сфере здравоохранения (Росздравнадзор) № РЗН 2020/11113 от 02.07.2020; 2020.03.10 декларация соответствия CE
+					.express-item__body(id='service-2').js-tab-body
+						.express-item__column
+							.express-item__inner
+								span Тестовое устройство:
+								| набор 20 IgM + 20 IgG тест-систем
+							.express-item__inner
+								span Флакон буферного устройства: 
+								| 1 для 20 систем
+							.express-item__inner
+								span Капилярная трубочка: 
+								| 40 трубочек в наборе
+					.express-item__body(id='service-3').js-tab-body
+						.express-item__doc
+
+							a(href="#").express-item__blocks
+								img.express-item__docs(src="assets/img/doc-1.png", alt="doc")
+								.express-item__more
+									span Временные методические рекомендации Минздрава РФ
+									.express-item__pdf
+										img(src="assets/img/pdf-file.svg", alt="pdf-file")
+										| 4,68 МБ
+							a(href="#").express-item__blocks
+								img.express-item__docs(src="assets/img/doc-2.png", alt="doc")
+								.express-item__more
+									span Регистрационное удостоверение
+									.express-item__pdf
+										img(src="assets/img/pdf-file.svg", alt="pdf-file")
+										| 2 МБ
+	section.offer-item 
+		.container
+			.offer-item__content
+				.offer-item__block
+					h3.offer-item__title  Получайте выгодные ценовые предложения первыми.
+					p.offer-item__text Подпишитесь на нашу рассылку
+				form.offer-item__form
+					input(type="email" name='email' required placeholder='Введите ваш email').offer-item__input
+					button.offer-item__button 
+						span Подписаться
+	section.contact
+		.container
+			.contact-content
+				h3.contact-title Обратная связь
+				.contact-row
+					.contact-boxes
+						p.contact-desc Давайте начнем с бесплатной консультации. Напишите нам, и мы определим как защитить ваш бизнес. За несколько минут разговора мы подберем для вас индивидуальное решение.
+						form.contact-form
+							.pop-row
+								.pop-groups
+									.pop-group
+										input.pop-input(type='text',required, placeholder='Ваше имя', value='')
+									.pop-group
+										input.pop-input(type='text',required, placeholder='Ваш телефон или email', value='')
+							.pop-group
+								textarea.pop-textarea(placeholder='Ваш вопрос', cols='30', rows='10', value='')
+							.contact-agree
+								input#agree(type='checkbox', checked='checked', required='required')
+								label(for='agree') Я даю согласие на обработку персональных данных
+							button.pop-button
+								span Отправить
+					.contact-item
+						.contact-group
+							img.contact-img(src='assets/img/loc.svg' alt='loc')
+							p.contact-text 140205, Московская область, г. Воскресенск, ул. Менделеева, д. 5
+						.contact-group
+							img.contact-img(src='assets/img/phone.svg', alt='contact-img')
+							a.contact-link(href='tel:+7 (495) 414-11-99') +7 (495) 414-11-99
+						.contact-group
+							img.contact-img(src='assets/img/mail.svg', alt='contact-img')
+							a.contact-link(href='mailto:info@neuroinform.com') info@neuroinform.com
+						.contact-social
+							a(href="#").contact-links
+								img(src="assets/img/whatsapp.svg", alt="whatsapp").contact-icon
+								.contact-inners WhatsApp: 
+									span @neuroinform
+							a(href="#").contact-links
+								img(src="assets/img/viber.svg", alt="viber").contact-icon
+								.contact-inners Viber: 
+									span @neuroinform
+							a(href="#").contact-links
+								img(src="assets/img/telegram.svg", alt="telegram").contact-icon
+								.contact-inners Telegram: 
+									span @neuroinform
+						p.contact-subdesc Мы всегда на связи. Напишите нам на почту или в мессенджеры.
+
+	include components/layout/footer.pug

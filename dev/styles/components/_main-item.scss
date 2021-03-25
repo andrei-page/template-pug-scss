@@ -1,0 +1,128 @@
+.main-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    min-height: 800px;
+    background: url('../img/main-bg.png') center no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    @include xl{
+        min-height: 650px;
+    }
+    @include lg{
+        min-height: 550px;
+    }
+    @include md{
+        min-height: 100%;
+        padding: 140px 0 50px 0;
+    }
+
+    &__content{
+        display: grid;
+        grid: auto / repeat(2,1fr);
+        grid-gap: 82px;
+        
+        @include xl{
+            grid-gap: 52px;
+        }
+        @include lg{
+            grid-gap: 40px;
+        }
+        
+        @include md{
+            grid: auto / repeat(1,1fr);
+
+        }
+    }
+
+    &__title{
+        color: #fff;
+        display: block;
+        
+    }
+    &__text{
+        font-size: 18px;
+        line-height: 28px;
+        padding: 16px 0 32px 0;
+        display: block;
+        letter-spacing: 0.15px;
+        color: #FDFDFD;
+        @include lg{
+            font-size: 16px;
+        }
+        @include sm{
+            font-size: 15px;
+        }
+
+    }
+    &__subdesc{
+        display: block;
+        padding-top: 56px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.15px;
+        color: #FDFDFD;
+        @include lg{
+            padding-top: 40px;
+
+        }
+        @include sm{
+            padding-top: 20px;
+            font-size: 13px;
+        }
+        }
+    &__button{
+        padding: 0 42px;
+        line-height: 56px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: flex;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #F5F5F5;
+        transition: .4s ease;
+        background: linear-gradient(91.18deg, #55B3D2 -0.13%, #3987B0 50.48%, #4E6EA8 99.87%);
+        transition: background .4s ease;
+        position: relative;
+        span{
+            z-index: 3;
+            position: relative;
+        }
+        &:after{
+            position: absolute;
+            content: "";
+            top: 0;
+            border-radius: 6px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(91.18deg, #4E6EA8 -0.13%, #3987B0 50.48%, #55B3D2 99.87%);
+            transition: opacity 0.5s ease-out;
+            z-index: 2;
+            opacity: 0;
+        }
+        &:hover::after{
+            opacity: 1;
+        }
+        @include sm{
+            font-size: 15px;
+            line-height: 50px;
+        }
+    }
+    &__img{
+        width: 100%;
+        display: block;
+
+        object-fit: contain
+        ;
+        @include md{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}

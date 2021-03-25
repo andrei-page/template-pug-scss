@@ -1,59 +1,59 @@
-include ../layout/header-menu.pug
-.header-item
-    .header-item__content
-        nav.header-item__nav
-            ul
-                li Услуги
-                    nav.header-item__menu
-                        .header-item__bg
-                        li
-                            a(href="") Первая ссылка
-                        li
-                            a(href="") Первая ссылка
-                        li
-                            a(href="") Первая ссылка
-                        li
-                            a(href="") Первая ссылка
-                li Блог
-                    nav.header-item__menu
-                        .header-item__bg
-                        li
-                            a(href="") Полезные материалы
-                        li
-                            a(href="#")  Кейсы
-                        li
-                            a(href="#")  Исследования
-                li Отрасли
-                    nav.header-item__menu
-                        .header-item__bg
-                        li
-                            a(href="#") Финансы
-                        li
-                            a(href="#") Недвижимость
-                        li
-                            a(href="#") Авто
-                        li
-                            a(href="#") Медицина
-                li Компания
-                    nav.header-item__menu
-                        .header-item__bg
-                        li
-                            a(href="")  О AMDG
-                        li
-                            a(href="#")  Отзывы
-                        li
-                            a(href="#")  Сертификаты
-                        li
-                            a(href="#")  Вакансии
-                        li
-                            a(href="#")  Контакты
-        a(href="#").header-item__phone +7 (495) 153-42-47
-        .header-item__search
-            img(src="assets/img/search-icon.svg", alt="search-icon")
-        .header-item__edit.js-pop-edit-button
-            img(src="assets/img/edit.svg", alt="edit").header-item__icon
-            button.header-item__button Оставить заявку
-        .header-item__hamburger
-            .header-item__box
-                span
-                span
+#header.header
+  .container
+    .header-content
+      a.header-logo(href='/')
+        img(src='assets/img/header-logo.svg', alt='logo')
+      .header-mobile.js-header-menu
+        ul
+          li
+            a(href='/') Главная
+          li
+            a(href='#')  О компании
+          li.dropdown
+            a(href='#').dropdown Решения
+            .header-list
+              ol.header-navig.js-tab-menu
+                li(data-id='organization_1').active Организация безопасной удалённой работы
+                li(data-id='risk_1') Снижение рисков, связанных с COVID-19 
+              .header-body.active(id='organization_1').js-tab-body
+                a(href="#") Двухфакторная аутентификация
+                a(href="#") Киберграмотность
+                a(href="#") Таск-менеджмент
+                a(href="#") Аудит по персональным данным
+              .header-body(id='risk_1').js-tab-body
+                a(href="#") Экспресс-тест на антиген Standard Q Covid-19 Ag
+                a(href="#") Экспресс-тест на антитела Standard Q Covid-19 Ag IgM/IgG Duo
+          li
+            a(href='#') Новости
+          li
+            a(href='contact.html') Контакты
+        .header-close.js-header-close
+          img(src='assets/img/close.svg', alt='close')
+      .header-block
+        ul.header-nav
+          li
+            a(href='/', aria-current='page') Главная
+          li
+            a(href='#') О компании
+          li.dropdown
+            a(href='solutions.html').dropdown Решения
+            .header-list
+              ol.header-navig.js-tab-header-menu
+                li(data-id='organization').active Организация безопасной удалённой работы
+                li(data-id='risk') Снижение рисков, связанных с COVID-19 
+              .header-body.active(id='organization').js-tab-header-body
+                a(href="#") Двухфакторная аутентификация
+                a(href="#") Киберграмотность
+                a(href="#") Таск-менеджмент
+                a(href="#") Аудит по персональным данным
+              .header-body(id='risk').js-tab-header-body  
+                a(href="#") Экспресс-тест на антиген Standard Q Covid-19 Ag
+                a(href="#") Экспресс-тест на антитела Standard Q Covid-19 Ag IgM/IgG Duo
+          li
+            a(href='#') Новости
+          li
+            a(href='contact.html') Контакты
+        button.header-button
+          span Заказать
+      .header-hamburger
+        img(src='assets/img/hamburger.svg', alt='hamburger')

@@ -1,7 +1,163 @@
 <!DOCTYPE html>
 html(lang="en")
 	include components/layout/head.pug
-	include components/pop/pop-edit.pug
 body
 	include components/layout/header.pug
+	section.main-item
+		.container
+			.main-item__content
+				img(src="assets/img/main-img.png", alt="main-img.png").main-item__img
+				.main-item__box
+					h1.main-item__title Neuroinform
+					p.main-item__text Помогаем бизнесу организовать безопасную и эффективную удаленную работу*
+					button.main-item__button 
+						span Связаться с нами
+					p.main-item__subdesc *в том числе в условиях эпидемии
+	section.work-safe
+		.container
+			.work-safe__content
+				.work-safe__row
+					.work-safe__box
+						h1.work-safe__title  Вы перевели часть сотрудников на удалённую работу?
+						p.work-safe__text  
+							| Значит они могут выполнять задачи с личных компьютеров и смартфонов. Это подвергает организацию киберугрозам, ведь сотрудники находятся за пределами защиты корпоративной сети. Такая ситуация приводит к исчезновению данных, остановке работы, утечке информации и прямым финансовым потерям. 
+							b Мы защищаем вашу организацию и сотрудников в новых условиях работы. 
+						a(href="solution.html").work-safe__link Подробнее
+					img(src="assets/img/work-safe.png", alt="work-safe").work-safe__img
+	section.solution-item
+		.container
+			.solution-item__content
+				h1.solution-item__title  Что мы предлагаем
+				p.solution-item__text  Создаём экосистему решений для кибербезопасности и удалённого доступа, чтобы обеспечить безопасную и эффективную работу
+				.solution-item__main.indent
+					p.solution-item__number 01
+					h3.solution-item__head  Организовать безопасную дистанционную работу 
+					h4.solution-item__desc  Настраиваем защиту устройств и данных организации
+					p.solution-item__texts Мы помогаем наиболее безболезненно для вашего бизнеса организовать безопасную дистанционную работу. Соответствие бизнес-процессов требованиям  законодательства, стойкая и удобная для сотрудников аутентификация, обучение основам информационной безопасности – это составляющие уверенности в стабильной и безопасной дистанционной работе.
+					a(href="organization_work.html").solution-item__link Подробнее
+					.solution-item__row
+						a(href="#").solution-item__box
+							img(src="assets/img/organization-icon-1.png", alt="solution icon").solution-item__icon
+							p.solution-item__subhead Двухфакторная аутентификация
+						a(href="#").solution-item__box
+							img(src="assets/img/organization-icon-2.png", alt="solution icon").solution-item__icon
+							p.solution-item__subhead Киберграмотность
+						a(href="#").solution-item__box
+							img(src="assets/img/organization-icon-3.png", alt="solution icon").solution-item__icon
+							p.solution-item__subhead Таск-менеджмент
+						a(href="#").solution-item__box
+							img(src="assets/img/organization-icon-4.png", alt="solution icon").solution-item__icon
+							p.solution-item__subhead Аудит по персональным данным
+					a(href="#").solution-item__button 
+						span Подобрать решение
+				.solution-item__main.indent.item-inner
+					p.solution-item__number 02
+					h3.solution-item__head Снизить риски, связанные с COVID-19 
+					h4.solution-item__desc Защита сотрудников в условиях эпидемии
+					p.solution-item__texts Последствия пандемии COVID-19 по-прежнему отражаются на нашей жизни и эта тенденция может сохранится в будущем. Сведите воздействие этого фактора на вашу команду к минимуму, посредством своевременного выявления вируса и предотвращения его распространения.
+					.solution-item__grid
+						.solution-item__product
+							img.solution-item__product-img(src="assets/img/product-1.png", alt="product")
+							.solution-item__product-block
+								p.solution-item__product-subtitle  Экспресс-тест на антиген
+								h4.solution-item__product-title  Standard Q Covid-19 Ag
+								a(href="#").solution-item__link Подробнее
+						.solution-item__product
+							img.solution-item__product-img(src="assets/img/product-1.png", alt="product")
+							.solution-item__product-block
+								p.solution-item__product-subtitle  Экспресс-тест на антиген
+								h4.solution-item__product-title  Standard Q Covid-19 Ag
+								a(href="#").solution-item__link Подробнее
+					a(href="#").solution-item__button
+						span Узнать подробнее
+	section.solve-item
+		.container
+			.solve-item__content
+				h3.solve-item__head С нашими решениями работают
+				.solve-item__row
+					a(href="#").solve-item__box
+						img(src="assets/img/solution-icon-1.png", alt="solution icon").solve-item__icon
+						p.solve-item__title Медицинские компании
+						p.solve-item__text Клиники и лаборатории
+					a(href="#").solve-item__box
+						img(src="assets/img/solution-icon-2.png", alt="solution icon").solve-item__icon
+						p.solve-item__title Финансовый сектор
+						p.solve-item__text Банки и страховые компании
+					a(href="#").solve-item__box
+						img(src="assets/img/solution-icon-3.png", alt="solution icon").solve-item__icon
+						p.solve-item__title Торговые предприятия
+						p.solve-item__text Ecommerce и офлайн-ритейл
+				button.solve-item__button 
+					span Получить предложение
+	section.work-safe
+		.container
+			.work-safe__content
+				.work-safe__row.indent
+					.work-safe__box
+						h1.work-safe__title  Более 12 лет опыта
+						p.work-safe__text  
+							| Мы на рынке с 2008 года, и помогли сотням компаний защитить свои данные и сотрудников.<br><br>Если вы переводите часть офиса на удаленную работу, сделайте это безопасно и эффективно.
+						a(href="#").work-safe__link Подробнее
+					img(src="assets/img/work-safe-2.png", alt="work-safe").work-safe__img
+				.work-safe__row.indent
+					img(src="assets/img/work-safe-3.png", alt="work-safe").work-safe__img
+					.work-safe__box
+						h1.work-safe__title Мы исследуем ваши задачи
+						p.work-safe__text И создадим индивидуальное решение, которое включает в себя только нужные вам продукты.
+
+	section.subscribe-item
+		.container
+			.subscribe-item__content
+				h3.subscribe-item__title Подпишитесь, чтобы первыми узнавать о новинках в линейке продуктов Нейроинформ
+				p.subscribe-item__text и новостях в сфере биотехнологий
+				form.subscribe-item__form
+					input#email.subscribe-item__input(type='email', name='subscribe-item-text', required='', placeholder='Введите ваш email')
+					button.subscribe-item__button(type='submit')
+						span Подписаться
+	section.contact
+		.container
+			.contact-content
+				h3.contact-title Обратная связь
+				.contact-row
+					.contact-boxes
+						p.contact-desc Давайте начнем с бесплатной консультации. Напишите нам, и мы определим как защитить ваш бизнес. За несколько минут разговора мы подберем для вас индивидуальное решение.
+						form.contact-form
+							.pop-row
+								.pop-groups
+									.pop-group
+										input.pop-input(type='text',required, placeholder='Ваше имя', value='')
+									.pop-group
+										input.pop-input(type='text',required, placeholder='Ваш телефон или email', value='')
+							.pop-group
+								textarea.pop-textarea(placeholder='Ваш вопрос', cols='30', rows='10', value='')
+							.contact-agree
+								input#agree(type='checkbox', checked='checked', required='required')
+								label(for='agree') Я даю согласие на обработку персональных данных
+							button.pop-button
+								span Отправить
+					.contact-item
+						.contact-group
+							img.contact-img(src='assets/img/loc.svg' alt='loc')
+							p.contact-text 140205, Московская область, г. Воскресенск, ул. Менделеева, д. 5
+						.contact-group
+							img.contact-img(src='assets/img/phone.svg', alt='contact-img')
+							a.contact-link(href='tel:+7 (495) 414-11-99') +7 (495) 414-11-99
+						.contact-group
+							img.contact-img(src='assets/img/mail.svg', alt='contact-img')
+							a.contact-link(href='mailto:info@neuroinform.com') info@neuroinform.com
+						.contact-social
+							a(href="#").contact-links
+								img(src="assets/img/whatsapp.svg", alt="whatsapp").contact-icon
+								.contact-inners WhatsApp: 
+									span @neuroinform
+							a(href="#").contact-links
+								img(src="assets/img/viber.svg", alt="viber").contact-icon
+								.contact-inners Viber: 
+									span @neuroinform
+							a(href="#").contact-links
+								img(src="assets/img/telegram.svg", alt="telegram").contact-icon
+								.contact-inners Telegram: 
+									span @neuroinform
+						p.contact-subdesc Мы всегда на связи. Напишите нам на почту или в мессенджеры.
+
 	include components/layout/footer.pug

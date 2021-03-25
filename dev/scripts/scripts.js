@@ -4,36 +4,73 @@ window.onload = function(){
     __main.init();
 }
 
+
 const __main = {
     init: ()=>{
-        __main.footerTab();
-        __main.popEditHeader();
+        __main.headerTab();
+        __main.mainTab();
         __main.headerMenu();
+        __main.productSlider();
+    },
+    productSlider: function(){
+        var galleryThumbs = new Swiper('.product-item__slider-small', {
+            spaceBetween: 15,
+            slidesPerView: 5,
+            loopedSlides: 5, //looped slides should be the same
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            speed: 1000,
+            breakpoints: {
+                320: {
+                    slidesPerView: 4,
+                    loopedSlides: 4, //looped slides should be the same
+                },
+                575: {
+                    slidesPerView: 5,
+                    loopedSlides: 5, //looped slides should be the same
+                },
+            }
+        });
+        var galleryTop = new Swiper('.product-item__slider', {
+            speed: 1000,
+            loopedSlides: 5, //looped slides should be the same
+            thumbs: {
+                swiper: galleryThumbs,
+            },
+        });
     },
     headerMenu: function(){
-        let button = $('.header-item__hamburger'),
-        menu = $('.js-header-menu');
+        let button = $('.header-hamburger'),
+        menu = $('.js-header-menu'),
+        close = $('.js-header-close');
+        $('.header-mobile ul a.dropdown').on('click',function(){
+            $('.header-list').toggleClass('active');
+            $(this).toggleClass('active');
+        })
         button.on('click',function(){
-            menu.addClass('is-active');
+            menu.fadeIn();
+        });
+        close.on('click',function(){
+            menu.fadeOut();
         });
 
     },
-    popEditHeader: function(){
-        let button = $('.js-pop-edit-button'),
-        pop = $('.js-pop-edit'),
-        close = $('.js-pop-edit-close')
+    headerTab: function(){
+        let button = $('.js-tab-header-menu li'),
+        item= $('.js-tab-header-body');
         button.on('click',function(){
-            pop.addClass('is-show');
-        });
-        close.on('click',function(){
-            pop.removeClass('is-show');
-        });
+          let id = $(this).attr('data-id')
+          item.removeClass("active")
+          $("#"+id).addClass('active');
+          button.removeClass("active")
+          $(this).addClass("active")
+        })
     },
-    footerTab: function(){
+    mainTab: function(){
         let button = $('.js-tab-menu li'),
         item= $('.js-tab-body');
         button.on('click',function(){
-          id = $(this).attr('data-id')
+          let id = $(this).attr('data-id')
           item.removeClass("active")
           $("#"+id).addClass('active');
           button.removeClass("active")
